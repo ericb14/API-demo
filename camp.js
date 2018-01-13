@@ -33,11 +33,30 @@ $(document).ready(function() {
             // document.getElementById('report').append(demo.data[0].images[0].url);
 
 
-            $('#report').append(demo.data[19].description + '   <br/>' + "<br/>" +
-                demo.data[19].weatherInfo);
+            $('#report').append(demo.data[19].weatherInfo);
 
             $("#report") > $('<img/>').attr("src", demo.data[19].images[4].url).appendTo("#report");
 
         });
+    });
+
+    $('#grid') > $('#directions').one('mouseover', function() {
+
+        $.getJSON('https://developer.nps.gov/api/v1/parks?fields=images&sort=images&api_key=VeZY3q7GAihGBDZlnOkWQTQVQByikWxWoXaTrQur',
+            function(demo) {
+
+                $('#directions p').append(demo.data[19].description).css({
+                    'font-size': '12px'
+                });
+
+                (function() {
+                    $('#directions p').mouseleave(function() {
+                        $('#directions p').remove(demo.data[19].description);
+
+                    });
+                });
+
+
+            });
     });
 });

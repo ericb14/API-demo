@@ -19,42 +19,47 @@
 <body>
     <div class="container-fluid">
 
-
-        <div class="row" id="first_row">
-            <h1 class="text-center">Dry Tortugas National Park</h1>
-            <div class="col-md-8 offset-md-2">
-
+        <div class="row" id="hero">
+            <div class="col-md-12">
+                <h1 id='hero_header'>Dry Tortugas National Park </h1>
             </div>
+        </div>
 
-            <div id='canvas_1' class="sizing col-md-6 ">
-                <img src="images/light_house.jpg" / class="img-responsive">
-                <h2>
-                    Dry Tortuga
-                    </h2>
-                <!-- <i class=" fa fa-sun-o fa-3x " aria-hidden="true " style="top:50%;left:45%;color:white;position:absolute; "></i> -->
-                <button onclick="demo();">weather conditions</button>
+
+        <div class="row">
+            <button onclick="demo();" style="margin-top:1em;">weather conditions</button>
+        </div>
+        <!-- === weather report output area === -->
+        <div id="report" class="col-md-8 offset-md-2">
+            <p></p>
+            <img />
+        </div>
+
+        <!-- === Grid Area Div === -->
+        <div class="row" id='grid'>
+            <div class="col-md-4" id="directions">
+                <p>
+                    directions
+                </p>
             </div>
-
-            <div id='canvas_2' class="sizing col-md-6">
-                <img src="images/tortugas.jpg" / class="img-responsive">
-                <h2>
-                    Dry Tortuga
-                <!-- </h2><i class="fa fa-sun-o fa-3x " aria-hidden="true " style="top:50%;left:45%;color:white;position:absolute; "></i> -->
+            <div class="col-md-4" style="background-color:#2a67c9;">
+                <p>
+                    two
+                </p>
             </div>
-
-            <!-- === weather report output area === -->
-            <div id="report" class="col-md-8 offset-md-2">
-                <p></p>
-                <img />
-
+            <div class="col-md-4" style="background-color:salmon;">
+                <p>
+                    three
+                </p>
             </div>
-
         </div>
 
 
 
 
     </div>
+
+
 </body>
 
 </html>
